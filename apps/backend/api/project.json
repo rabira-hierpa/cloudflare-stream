@@ -11,12 +11,12 @@
       "options": {
         "target": "node",
         "compiler": "tsc",
-        "outputPath": "dist/api",
-        "main": "apps/backend/src/main.ts",
+        "outputPath": "apps-build/backend/dist/api",
+        "main": "apps/backend/api/src/main.ts",
         "tsConfig": "apps/backend/api/tsconfig.app.json",
-        "assets": ["apps/backend/src/assets"],
+        "assets": ["apps/backend/api/src/assets"],
         "isolatedConfig": true,
-        "webpackConfig": "apps/backend/webpack.config.js"
+        "webpackConfig": "apps/backend/api/webpack.config.js"
       },
       "configurations": {
         "development": {},
@@ -49,7 +49,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/backend/jest.config.ts",
+        "jestConfig": "apps/backend/api/jest.config.ts",
         "passWithNoTests": true
       },
       "configurations": {
