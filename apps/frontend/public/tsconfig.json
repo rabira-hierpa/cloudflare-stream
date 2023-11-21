@@ -11,13 +11,15 @@
     "verbatimModuleSyntax": false
   },
   "files": [],
-  "include": [],
+  "include": ["apps/frontend/src/**/*.js", "apps/frontend/src/**/*.jsx", "apps/frontend//**/*.ts", "apps/frontend/src/**/*.vue"],
   "references": [
     {
-      "path": "./tsconfig.app.json"
+      "path": "./tsconfig.app.json",
+      "composite": true
     },
     {
-      "path": "./tsconfig.spec.json"
+      "path": "./tsconfig.spec.json",
+      "composite": true
     }
   ],
   "extends": "../../../tsconfig.base.json"

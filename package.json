@@ -1,12 +1,11 @@
 {
   "name": "@cloudflare-stream/source",
   "version": "0.0.0",
-  "license": "MIT",
+  "private": true,
   "scripts": {
     "api": "nx serve api",
     "frontend": "nx serve public"
   },
-  "private": true,
   "dependencies": {
     "@dicebear/avatars-bottts-sprites": "^4.10.8",
     "axios": "^1.0.0",
@@ -28,8 +27,7 @@
     "passport-local-mongoose": "^8.0.0",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.0",
-    "tslib": "^2.3.0",
-    "vue-router": "^4.2.4"
+    "tslib": "^2.3.0"
   },
   "devDependencies": {
     "@nx/cypress": "17.0.0-beta.4",
@@ -74,6 +72,7 @@
     "nx": "16.10.0",
     "prettier": "^3.0.0",
     "sass": "1.62.1",
+    "sass-loader": "^10.0.0",
     "ts-jest": "^29.1.0",
     "ts-node": "10.9.1",
     "tsconfig-paths": "^4.2.0",
@@ -82,7 +81,7 @@
     "vite-plugin-dts": "^3.6.0",
     "vite-tsconfig-paths": "^4.2.1",
     "vitest": "^0.34.6",
-    "vue": "^3.3.4",
-    "vue-tsc": "^1.8.19"
-  }
+    "vue": "^3.3.4"
+  },
+  "license": "MIT"
 }
