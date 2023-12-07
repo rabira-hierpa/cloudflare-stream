@@ -7,6 +7,7 @@ import initRouter from './routes/router';
 import swaggerOptions from './utils/constants/swagger-options';
 
 const app = express(),
+  cors = require('cors'),
   bodyParser = require('body-parser'),
   swaggerJsdoc = require('swagger-jsdoc'),
   swaggerUi = require('swagger-ui-express');
@@ -24,10 +25,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 initPassportAndSessions(app);
 
+app.use(cors())
 app.get('/', (req, res) => {
   res.send({ message: 'Welcome to cloud stream API!' });
 });
 
+export const API_VERSION = '/api/v1';
 const port = process.env.PORT || 3333;
 const specs = swaggerJsdoc(swaggerOptions);
 initRouter(app);
@@ -39,6 +42,6 @@ app.use(
 );
 
 const server = app.listen(port, () => {
-  console.log(`Listening at http://localhost:${port}/api`);
+  console.log(`Listening at http://localhost:${port}/api-docs`);
 });
 server.on('error', console.error);

@@ -26,7 +26,6 @@ export async function LoggedInUserProfile(
 ): Promise<void> {
   const user: any = req.user;
   const { salt, hash, ...userInfo } = user._doc;
-  console.log({ userInfo });
   res.status(200).send({
     user: {
       ...userInfo,

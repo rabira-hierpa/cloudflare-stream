@@ -4,16 +4,12 @@ import { userProfile } from '../controllers/user.controller';
 
 const router = express.Router();
 
-// @route   GET /profile
-// @desc    Get user profile
-// @access  Private
-//middleware handles validating the user exists and is logged in
 /**
  * @swagger
- * /profile:
+ * /user/profile:
  *   get:
  *     summary: Get user profile
- *     tags: [Users]
+ *     tags: [User]
  *     security:
  *       - bearerAuth: []
  *     responses:

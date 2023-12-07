@@ -36,7 +36,7 @@ function ensureAuthenticated(req, res, next) {
 }
 /**
  * @swagger
- * /sudoregister:
+ * /account/sudoregister:
  *   post:
  *     summary: admin only access for creating new users where that user can be an admin or any other regular user
  *     tags: [Authentication]
@@ -71,7 +71,7 @@ router.post(
 
 /**
  * @swagger
- * /login:
+ * /api/v1/account/login:
  *   post:
  *     summary: Log in a user
  *     tags: [Authentication]
@@ -103,7 +103,7 @@ router.post(
 
 /**
  * @swagger
- * /register:
+ * /api/v1/account/register:
  *   post:
  *     summary: Register a new user
  *     tags: [Authentication]
@@ -137,7 +137,7 @@ router.post(
 
 /**
  * @swagger
- * /logout:
+ * /api/v1/account/logout:
  *   get:
  *     summary: Log out a user
  *     tags: [Authentication]
@@ -155,7 +155,7 @@ router.get('/logout', function (req, res) {
 
 /**
  * @swagger
- * /resetPasswordRequest:
+ * /api/v1/account/resetPasswordRequest:
  *   post:
  *     summary: Request a password reset
  *     tags: [Authentication]
@@ -183,7 +183,7 @@ router.post(
 
 /**
  * @swagger
- * /verifyResetToken/{resetToken}:
+ * /api/v1/account/verifyResetToken/{resetToken}:
  *   get:
  *     summary: Verify a password reset token
  *     tags: [Authentication]
@@ -203,7 +203,7 @@ router.get('/verifyResetToken/:resetToken', verifyResetToken);
 
 /**
  * @swagger
- * /resetPassword:
+ * /api/v1/account/resetPassword:
  *   post:
  *     summary: Reset a user's password
  *     tags: [Authentication]
